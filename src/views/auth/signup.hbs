@@ -1,0 +1,54 @@
+<section class="contenedor">
+  <div class="login">
+    <form action="/signup" class="login-form" id="login-formulario" method="post">
+      <h1 class="login-title"><b>Registro de Usuarios</b></h1>
+      <div class="login-content">
+        <div class="login-box">
+          <i class="ri-user-3-line login-icon"></i>
+          <div class="login-box-input">
+            <input type="email" name="usuario" placeholder=" " class="login-input" required>
+            <label for="" class="login-label">Email</label>
+          </div>
+        </div>
+        <div class="login-box">
+          <i class="ri-lock-2-line login-icon"></i>
+          <div class="login-box-input">
+            <input type="password" required class="login-input" id="login-pass" placeholder=" " name="contra">
+            <label for="" class="login-label">Password</label>
+            <i class="ri-eye-off-line login-eye" id="login-eye"></i>
+          </div>
+        </div>
+        <div class="login-box">
+          <i class="ri-team-fill login-group"></i>
+          <div class="login-box-input">
+            <input type="text" name="cargo" placeholder=" " class="login-input" required>
+            <label for="" class="login-label">Cargo</label>
+          </div>
+        </div>
+        <span class="informa-contra">La contraseña debe tener las siguientes especificaciones</span>
+        <div class="contra-requerimientos">
+          <i class="fa-solid fa-circle-dot icon-requeri"></i>
+          <div class="contra-requeri-text">
+            <span id="texto">Al menos una Letra</span>
+          </div>
+        </div>
+        <div class="contra-requerimientos">
+          <i class="fa-solid fa-circle-dot icon-requeri"></i>
+          <div class="contra-requeri-text">
+            <span>Al menos un Simbolo</span>
+          </div>
+        </div>
+        <div class="contra-requerimientos">
+          <i class="fa-solid fa-circle-dot icon-requeri"></i>
+          <div class="contra-requeri-text">
+            <span>La contraseña debe de tener 6 o mas caracteres</span>
+          </div>
+        </div>
+        <div class="boton-center">
+          <button class="login-button">Registrarse</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+<script src="/event/loginContra.js"></script>

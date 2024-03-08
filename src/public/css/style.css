@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --black-color: hsl(0, 0%, 0%);
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body, input, button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+}
+
+body {
+  color: var(--white-color);
+}
+
+input, button {
+  border: none;
+  outline: none;
+}
+
+.contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  background: url('/img/fondo-login.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.login {
+  position: relative;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.login-form {
+  position: relative;
+  background-color: hsl(0, 0%, 10%, .1);
+  border: 2px solid var(--white-color);
+  margin-inline: 1.5rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(8px);
+}
+
+.login-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.login-content, .login-box {
+  display: grid;
+}
+
+.login-content {
+  row-gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.login-box {
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  column-gap: .75rem;
+  border-bottom: 1px solid var(--white-color);
+}
+
+.login-icon, .login-eye, .login-group {
+  font-size: 1.25rem;
+}
+
+.login-input {
+  width: 100%;
+  padding-block: .8rem;
+  background: none;
+  color: var(--white-color);
+  position: relative;
+  z-index: 1;
+}
+
+.login-box-input {
+  position: relative;
+}
+
+.login-label {
+  position: absolute;
+  left: 0;
+  top: 13px;
+  font-weight: 500;
+  transition: top .3s, font-size .3s;
+}
+
+.login-eye {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.login-box:nth-child(2) input {
+  padding-right: 1.8rem;
+}
+
+.informa-contra {
+  color: whitesmoke;
+  font-size: 0.9rem;
+}
+
+.contra-requerimientos {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+.icon-requeri {
+  font-size: 0.9rem;
+  color: dimgrey;
+}
+
+.contra-requeri-text {
+  position: relative;
+  left: 10px;
+  color: dimgrey;
+  font-size: 0.9rem;
+}
+
+.boton-center {
+  display: grid;
+  place-items: center;
+  margin-bottom: -2.5rem;
+}
+
+.login-button {
+  border-radius: 999px;
+  padding: 1em 2em;
+  background-color: white;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  font-family: var(--body-font);
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease 0s;
+  letter-spacing: 0.08rem;
+}
+
+.login-button:hover,
+.login-button:focus {
+  color: white;
+  background: linear-gradient(117deg, rgb(7, 182, 226, 0.705), rgb(49, 192, 248));
+  box-shadow: 0 0.1rem 0.8rem rgb(34, 152, 221);
+  font-weight: bold;
+}
+
+.contra-requeri-text.cumple-requerimiento {
+  color: white;
+}
+
+.icon-requeri.cumple-requerimiento {
+  color: dodgerblue;
+}
+
+.login-input:focus + .login-label {
+  top: -13px;
+  font-size: var(--small-font-size);
+}
+
+.login-input:not(:placeholder-shown).login-input:not(:focus) + .login-label {
+  top: -13px;
+  font-size: var(--small-font-size);
+}
